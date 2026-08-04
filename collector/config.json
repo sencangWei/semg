@@ -1,0 +1,70 @@
+{
+  "session": "default",
+  "customer": "",
+  "scene": "",
+
+  "prepare_delay_s": 5,
+  "output_dir": "./data/output",
+
+  "devices": {
+    "semg": {
+      "enabled": false,
+      "type": "lk_m1299",
+      "tcp_port": 8765,
+      "ports": [],
+      "description": "双臂 sEMG 采集器"
+    },
+
+    "imu_left": {
+      "enabled": true,
+      "type": "bno085_esp32",
+      "tcp_addr": "192.168.113.49",
+      "tcp_port": 8766,
+      "trigger_port": 8876,
+      "position": "left",
+      "description": "左腕 IMU (BNO085 + ESP32-S3)"
+    },
+
+    "imu_right": {
+      "enabled": true,
+      "type": "bno085_esp32",
+      "tcp_addr": "192.168.113.50",
+      "tcp_port": 8767,
+      "trigger_port": 8877,
+      "position": "right",
+      "description": "右腕 IMU (BNO085 + ESP32-S3)"
+    },
+
+    "camera_left": {
+      "enabled": false,
+      "type": "webcam",
+      "source_type": "usb",
+      "source": "0",
+      "device_index": 0,
+      "description": "左相机 (USB Camera 0)"
+    },
+
+    "camera_right": {
+      "enabled": false,
+      "type": "webcam",
+      "source_type": "usb",
+      "source": "1",
+      "device_index": 1,
+      "description": "右相机 (USB Camera 1)"
+    }
+  },
+
+  "imu_bno085": {
+    "report_rate_hz": 200,
+    "reports": ["rotation", "accel", "gyro", "mag"],
+    "quaternion": true,
+    "accel_unit": "m/s2",
+    "gyro_unit": "rad/s"
+  },
+
+  "semg": {
+    "sample_rate_hz": 1000,
+    "channels_per_arm": 16,
+    "arms": ["L", "R"]
+  }
+}

@@ -1,0 +1,26 @@
+# Ignore build directories
+Debug/
+Release/
+# Ignore CubeIDE metadata and settings
+metadata/
+settings/
+# Ignore auto-generated files
+*.bin
+*.elf
+*.hex
+*.map
+*.o
+*.d
+# Ignore CubeMX configuration backups
+*.bak
+# Ignore temporary files
+*.log
+*.tmp
+# Ignore generated drivers and middleware (optional)
+Drivers/
+Middlewares/
+# Ignore Eclipse project files (optional, if not shared)
+project
+cproject
+# Ignore CubeMX-generated linker scripts (if default)
+*.ld

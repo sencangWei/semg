@@ -1,0 +1,43 @@
+# 编译产物
+.pio/
+build/
+dist/
+*.o
+*.a
+*.elf
+*.map
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 数据
+data/
+*.csv
+*.npz
+
+# 二进制/压缩包（不适合 git）
+*.exe
+*.dll
+*.rar
+*.zip
+*.bin
+*.hex
+*.pdb
+*.step
+*.stp
+*.lib
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 工具缓存
+.omc/
+*.a

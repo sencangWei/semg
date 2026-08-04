@@ -1,0 +1,18 @@
+# 采集数据（大，不进 git）
+data/
+*.csv
+*.npz
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
